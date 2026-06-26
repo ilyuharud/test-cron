@@ -3,7 +3,7 @@ name: My First Scheduled Job
 on:
   schedule:
     # Запуск каждые 15 минут
-    - cron: '*/15 * * * *'
+    - cron: '*/1 * * * *'
   # Позволяет запускать воркфлоу вручную кнопкой в интерфейсе
   workflow_dispatch: 
 
