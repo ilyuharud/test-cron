@@ -1,0 +1,16 @@
+name: My First Scheduled Job
+
+on:
+  schedule:
+    # Запуск каждые 15 минут
+    - cron: '*/15 * * * *'
+  # Позволяет запускать воркфлоу вручную кнопкой в интерфейсе
+  workflow_dispatch: 
+
+jobs:
+  my-task:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print welcome message
+        run: echo "Привет! Этот скрипт запустился автоматически по расписанию!"
+
