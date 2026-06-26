@@ -2,10 +2,8 @@ name: My First Scheduled Job
 
 on:
   schedule:
-    # Запуск каждые 15 минут
-    - cron: '*/1 * * * *'
-  # Позволяет запускать воркфлоу вручную кнопкой в интерфейсе
-  workflow_dispatch: 
+    - cron: '3 4 * * *'    # 1-collect → 07:03 МСК
+  workflow_dispatch:        # + кнопка ручного запуска
 
 jobs:
   my-task:
